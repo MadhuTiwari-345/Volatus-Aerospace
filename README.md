@@ -67,7 +67,7 @@ Fast refresh
 
 Real-time error reporting
 
-##☁️ Deployment (Cloud Run)##
+**☁️ Deployment (Cloud Run)**
 
 The production version of this app is deployed using Google Cloud Run, which offers:
 

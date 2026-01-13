@@ -123,3 +123,4 @@ Ensure your Gemini API quota is sufficient
 For production, use secure environment variable configuration
 
 Cloud Run handles HTTPS and scaling automatically
+`

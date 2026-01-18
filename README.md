@@ -158,4 +158,3 @@ The production version of this app is deployed using **Google Cloud Run**, a ful
 
 
 
-Just say the word 👌

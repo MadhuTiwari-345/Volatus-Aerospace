@@ -1,126 +1,161 @@
-**🚀 Run & Deploy**
 
-This repository contains everything you need to run the application locally and understand how it’s deployed in production.
 
-**🌐 Live Application**
-👉 https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/
+## 🚀 Run & Deploy Guide
 
-The app is deployed on Google Cloud Run, providing scalable, serverless hosting with fast cold-start performance.
+This repository contains everything required to run the application locally and understand how it is deployed in production.
 
-**🧑‍💻 Running the App Locally**
+The app is designed with scalability and performance in mind and is deployed on **Google Cloud Run**, enabling serverless execution with automatic scaling and minimal operational overhead.
 
-Follow the steps below to set up and run the project on your local machine.
 
-**✅ Prerequisites**
 
-Make sure you have the following installed:
+## 🌐 Live Application
 
-Node.js (v18 or later recommended)
+🔗 **Production URL**
+[https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/](https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/)
 
-npm (comes bundled with Node.js)
+The production build is hosted on **Google Cloud Run**, which provides:
 
-A valid Gemini API Key
+* Fast cold starts
+* Automatic HTTPS
+* Global scalability
+* Pay-per-use billing model
 
-**📦 Installation**
 
-Clone the repository and install dependencies:
 
+## 🧑‍💻 Running the App Locally
+
+Follow the steps below to set up and run the project on your local machine for development or testing.
+
+
+
+## ✅ Prerequisites
+
+Ensure the following are installed on your system:
+
+* **Node.js** (v18 or later recommended)
+* **npm** (bundled with Node.js)
+* A valid **Google Gemini API Key**
+
+You can verify your Node.js installation using:
+
+```bash
+node -v
+npm -v
+```
+
+
+
+## 📦 Installation
+
+Clone the repository and install all dependencies:
+
+```bash
 npm install
+```
+
+This command installs all required packages defined in `package.json`, including runtime dependencies and development tools.
 
 
-This will install all required packages listed in package.json.
 
-**🔐 Environment Configuration**
+## 🔐 Environment Configuration
 
-The app uses Google Gemini API for AI-powered features.
+This application uses the **Google Gemini API** to power its AI features.
 
-Create a file named .env.local in the root directory
+### Steps:
 
-Add your Gemini API key:
+1. Create a file named `.env.local` in the root directory
+2. Add your Gemini API key:
 
+```env
 GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### ⚠️ Important Notes
+
+* **Do NOT commit** `.env.local` to version control
+* Ensure the API key has the required permissions enabled in **Google Cloud Console**
+* API quota limits may affect AI-powered features during heavy usage
 
 
-**⚠️ Important**
 
-Never commit .env.local to version control
+## ▶️ Start the Development Server
 
-Ensure the key has proper API access enabled in Google Cloud Console
+Run the application in development mode:
 
-**▶️ Start Development Server**
-
-Run the app in development mode:
-
+```bash
 npm run dev
+```
 
+Once the server starts, open your browser and visit:
 
-Once started, the app will be available at:
-
+```
 http://localhost:3000
+```
+
+### Development Features
+
+* Hot reloading
+* Fast refresh
+* Real-time error reporting
+* Improved developer feedback loop
 
 
-The development server supports:
 
-Hot reloading
+## ☁️ Deployment (Google Cloud Run)
 
-Fast refresh
+The production version of this app is deployed using **Google Cloud Run**, a fully managed serverless platform for containerized applications.
 
-Real-time error reporting
+### Key Benefits
 
-**☁️ Deployment (Cloud Run)**
+* Automatic horizontal scaling
+* Secure environment variable management
+* No server maintenance required
+* HTTPS enabled by default
 
-The production version of this app is deployed using Google Cloud Run, which offers:
+### High-Level Deployment Flow
 
-Automatic scaling
+1. Build the production version of the application
+2. Create a Docker image
+3. Push the image to **Google Container Registry (GCR)**
+4. Deploy the image to **Google Cloud Run**
+5. Configure environment variables securely
+6. Serve traffic via the Cloud Run service URL
 
-Container-based deployment
 
-Secure environment variables
 
-Pay-per-use pricing
+## 📌 Production Deployment URL
 
-High-level deployment flow:
+🔗 [https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/](https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/)
 
-Build the application
 
-Containerize using Docker
 
-Push image to Google Container Registry
+## 🛠️ Tech Stack
 
-Deploy to Google Cloud Run
+* **Frontend:** React / Next.js
+* **Backend:** Node.js
+* **AI Services:** Google Gemini API
+* **Deployment:** Google Cloud Run
+* **Environment Management:** `.env.local` (local), Cloud Run environment variables (production)
 
-Attach environment variables securely
 
-**📌 Live Deployment URL**
-https://volatus-aerospace-improved-ux-demo-73291669658.us-west1.run.app/
 
-**🛠️ Tech Stack**
-
-Frontend: React / Next.js (if applicable)
-
-Backend: Node.js
-
-AI: Google Gemini API
-
-Deployment: Google Cloud Run
-
-Environment Management: .env.local
-
-**🧪 Scripts Reference**
+## 🧪 Scripts Reference
 
 | Command         | Description                  |
 | --------------- | ---------------------------- |
 | `npm install`   | Install project dependencies |
-| `npm run dev`   | Run app in development mode  |
-| `npm run build` | Build app for production     |
-| `npm start`     | Start production server      |
+| `npm run dev`   | Start development server     |
+| `npm run build` | Build the app for production |
+| `npm start`     | Run the production server    |
 
 
-**📄 Notes**
 
-Ensure your Gemini API quota is sufficient
+## 📄 Additional Notes
 
-For production, use secure environment variable configuration
+* Ensure your **Gemini API quota** is sufficient for production workloads
+* Use **Cloud Run environment variables** instead of `.env.local` in production
+* Cloud Run automatically handles HTTPS, scaling, and load balancing
 
-Cloud Run handles HTTPS and scaling automatically
-`
+
+
+Just say the word 👌
